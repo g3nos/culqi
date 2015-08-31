@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NAV</title>
+	<script src="js/jquery-1.11.2.min.js"></script>
+
+	<style>
+	.cd-secondary-nav ul {
+	  position: fixed;
+	  right: 5%;
+	  bottom: 20px;
+	  visibility: hidden;
+	  transform: scale(0);
+	  transform-origin: 100% 100%;
+	  transition: transform 0.3s, visibility 0s 0.3s;
+	}
+	.cd-secondary-nav ul.is-visible {
+	  visibility: visible;
+	  transform: scale(1);
+	  transition: transform 0.3s, visibility 0s 0s;
+	}
+	 
+	@media only screen and (min-width: 1170px) {
+	  .cd-secondary-nav ul {
+	    /* reset navigation values */
+	    position: static;
+	    width: auto;
+	    max-width: 100%;
+	    visibility: visible;
+	    transform: scale(1);
+	  }
+	}
+	 
+	.cd-secondary-nav-trigger {
+	  position: fixed;
+	  bottom: 20px;
+	  right: 5%;
+	  width: 44px;
+	  height: 44px;
+	}
+	@media only screen and (min-width: 1170px) {
+	  .cd-secondary-nav-trigger {
+	    display: none;
+	  }
+	}
+	@media only screen and (min-width: 1170px) {
+	  .cd-secondary-nav.is-fixed {
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    height: 70px;
+	    width: 100%;
+	  }
+	  .cd-secondary-nav li a {
+	    padding: 58px 40px 0 40px;
+	    transition: padding 0.2s;
+	  }
+	  .cd-secondary-nav li a span {
+	    transition: opacity 0.2s;
+	  }
+	  .cd-secondary-nav.animate-children li a {
+	    padding: 26px 30px 0 30px;
+	  }
+	  .cd-secondary-nav.animate-children li a span {
+	    opacity: 0;
+	  }
+	}
+	</style>
+</head>
+<body>
+
+	<section id="cd-intro">
+		<div id="cd-intro-tagline">
+			<h1><!-- your tagline here --></h1>
+			<a href="#0" class="cd-btn"><!-- your action button text here --></a>
+		</div> 
+	</section>
+	 
+	<div class="cd-secondary-nav">
+		<a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
+		<nav>
+			<ul>
+				<li>
+					<a href="#cd-placeholder-1">
+						<b>Services</b>
+						<span></span><!-- icon -->
+					</a>
+				</li>
+				<!-- other items here -->
+			</ul>
+		</nav>
+	</div> <!-- .cd-secondary-nav -->
+	<main class="cd-main-content">
+		<section id="cd-placeholder-1" class="cd-section cd-container">
+			<!-- your section content here-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+		</section> <!-- #cd-placeholder-1 -->
+	 
+		<section id="cd-placeholder-2" class="cd-section cd-container">
+			<!-- your section content here-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quos numquam eius aspernatur, itaque quae distinctio repudiandae in doloremque tenetur autem veritatis porro corporis omnis voluptatum odit possimus non expedita.</p>
+		</section> <!-- #cd-placeholder-2 -->
+	 
+		<!-- other sections here -->
+	</main> <!-- .cd-main-content -->
+
+	<script>
+	$(document).ready(function(){
+		var secondaryNav = $('.cd-secondary-nav'),
+		secondaryNavTopPosition = secondaryNav.offset().top;
+
+		$(window).on('scroll', function(){
+			
+			if($(window).scrollTop() > secondaryNavTopPosition ) {
+				secondaryNav.addClass('is-fixed');	
+				setTimeout(function() {
+		            secondaryNav.addClass('animate-children');
+		            $('#cd-logo').addClass('slide-in');
+					$('.cd-btn').addClass('slide-in');
+		        }, 50);
+			} else {
+				secondaryNav.removeClass('is-fixed');
+				setTimeout(function() {
+		            secondaryNav.removeClass('animate-children');
+		            $('#cd-logo').removeClass('slide-in');
+					$('.cd-btn').removeClass('slide-in');
+		        }, 50);
+			}
+		});
+	});
+	</script>
+</body>
+</html>

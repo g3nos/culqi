@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Documentación | CULQI</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/monokai_sublime.css">
+	<script src="js/highlight.pack.js"></script>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/scripts.js"></script>
+	<script>hljs.initHighlightingOnLoad()</script>
+</head>
+<body>
+<div id="lightbox" class="shadow">
+	<div class="mensaje">
+		<span><i class="icon-cancel"></i></span>
+		<iframe src="https://docs.google.com/forms/d/1PZ3svqMVJnGu-BvD0Am8YikmaU83aJRrkzCPQXhCV7U/viewform?embedded=true" width="600" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	</div>
+</div>
+<header>
+	<div class="container">
+		<div class="logo">
+			<a href="http://culqi.com">
+				<img src="images/culqi_logo.png" alt="">
+			</a>
+		</div>
+		<div class="pais">
+			<ul>
+				<li><img src="images/peru.png" alt=""></li>
+				<li>Perú</li>
+			</ul>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">Librerías</a></li>
+				<li><a href="#">Documentación</a></li>
+				<li><a href="contacto.html">Ayuda</a></li>
+				<li><a id="opener" href="javascript:void(0);" class="boton">Escríbenos</a></li>
+			</ul>
+		</nav>
+		<div class="nav-mobil">
+			<i class="icon-cancel"></i>
+			<ul>
+				<li><a href="#">Librerías</a></li>
+				<li><a href="#">Documentación</a></li>
+				<li><a href="contacto.html">Ayuda</a></li>
+				<li><a id="opener" href="javascript:void(0);" class="boton">Escríbenos</a></li>
+			</ul>
+		</div>
+	</div>
+	<i class="icon-menu"></i>
+</header>
+<section>
+	<div class="container">
+		<div id="sidebar">
+			<h2>Bienvenido</h2>
+			<ul>
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 2</li>
+				<li>item 2</li>
+				<li>item 2</li>
+				<li>item 2</li>
+				<li>item 2</li>
+			</ul>
+		</div>
+		<div class="documentation" id="tabs">
+			<h2>Integración con Culqi</h2>
+			<p>En este tutorial usted va aprender a realizar la integración con Culqi. Si necesita ayuda, contactese con uno de nuestros desarrolladores para asesorarlo.</p>
+
+			<p>Usted tiene el token de datos de la tarjeta de crédito de su usuario, <strong>¿ahora qué?</strong> Ahora usted les cobra dinero. Esto sucede en su servidor, y la forma más rápida de hacerlo es mediante el uso de una de nuestras bibliotecas de cliente. Si no lo ha hecho, instale su lenguaje favorito ahora. En este tutorial, vamos a mostrar código para PHP, y Java.</p>
+
+			<ul class="languages">
+				<li><a href="#tabs-1">php</a></li>
+				<li><a href="#tabs-2">java</a></li>
+				<!--<li><a href="#tabs-3">Python</a></li>-->
+			</ul>
+			<div id="tabs-1">
+				<h3>PHP</h3>
+				<p>En este tipo de integración el formulario de pago aparece como una pequeña ventana modal dentro de tu website como se muestra en la siguiente figura.</p>
+<pre>
+<code class="php">
+Culqi::$LLAVE_SECRETA = "....";
+Culqi::$CODIGO_COMERCIO = "....";
+
+echo "&lt;br/&gt;";
+echo Checkout::createOrderUrl(array(
+"curency" => "PEN",
+"amount" => 50,
+));
+</code>
+</pre>
+				<p>La url obtenida debe ser incrustada en tu formulario de pago de la siguiente forma:</p>
+<pre>
+<code class="php">
+&lt;script src="&lt;?php echo $url ?&gt;"&gt;&lt;/script&gt;
+</code>
+</pre>
+			</div>
+			<div id="tabs-2">
+				<h3>Java</h3>
+				<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+				<pre>
+					<code class="java">
+Culqi.LLAVE_SECRETA = "...";
+Culqi.CODIGO_COMERCIO = "...";
+HashMap&lt;String, Object&gt; params = new HashMap&lt;String, Object&gt;();
+params.put("moneda", "PEN");
+params.put("monto", 45900);
+String url = Pago.crearUrlPago(params);
+					</code>
+				</pre>
+				<p>La url obtenida debe ser incrustada en tu formulario de pago de la siguiente forma:</p>
+<pre>
+<code class="java">
+&lt;script src="${url}"&gt;&lt;/script&gt;
+</code>
+</pre>
+			</div>
+		</div>
+	</div>
+	<!--<div class="integrate empezar escribenos">
+		<div class="container">
+			<img src="images/escribenos.png" alt="">
+			<h1>¿Necesitas Ayuda?</h1>
+			<p>Contáctate directamente con el equipo de desarrollo de Culqi. Envíanos tus preguntas y sugerencias.</p>
+			<ul>
+				<li><a href="#">Contáctanos</a></li>
+			</ul>
+		</div>
+	</div>-->
+	<div class="integrate">
+		<div class="container">
+			<img src="images/mail.png" alt="">
+			<h2>¿Quieres saber más de Culqi?</h2>
+			<p>Déjanos tus datos para que tu negocio sea uno de los primeros en usar esta innovadora plataforma de pagos.</p>
+			<ul>
+				<li><a href="desarrolladores.html">Ver documentación</a></li>
+				<li><a href="javascript:void(0);" id="opener3" class="boton">Escríbenos</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="box one">
+			<h3>Culqi</h3>
+			<ul>
+				<li><a href="nosotros.html">Nosotros</a></li>
+				<li><a href="http://elcomercio.pe/paginas/smartphones-tablets/culqi-app-peruana-que-busca-revolucionar-pagos-online-noticia-1751283" target="_blank">Prensa</a></li>
+				<!--<li><a href="#">Seguridad</a></li>
+				<li><a href="#">Contacto</a></li>
+				<li><a href="#">Blog</a></li>-->
+			</ul>
+		</div>
+		<div class="box two">
+			<h3>Producto</h3>
+			<ul>
+				<li><a href="beneficios.html">Beneficios</a></li>
+				<li><a href="precio.html">Precios</a></li>
+				<li><a href="seguridad.html">Seguridad</a></li>
+				<li><a href="legal.html">Legal</a></li>
+			</ul>
+		</div>
+		<div class="box three">
+			<h3>Soporte</h3>
+			<ul>
+				<li><a href="contacto.html">Contacto</a></li>
+				<!--<li><a href="#">Estado</a></li>
+				<li><a href="#">Chat en vivo</a></li>-->
+				<li>Llámanos (+511) 416 - 2018</li>
+			</ul>
+		</div>
+		<div class="box four">
+			<ul>
+				<li><img src="images/pci.png" alt=""></li>
+				<ul class="redes">
+					<li><a href="https://facebook.com/Culqi" target="_blank"><i class="icon-facebook"></i></a></li>
+					<li><a href="https://twitter.com/CulqiOficial" target="_blank"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/culqi" target="_blank"><i class="icon-linkedin"></i></a></li>
+				</ul>
+				<li class="mixpanel">
+					<a href="https://mixpanel.com/f/partner" target="_blank"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+				</li>
+				<li>&copy; Culqi</li>
+				<li>Todos los derechos reservados</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box-mobile">
+		<div id="accordion">
+			<h3>Culqi <i class="icon-down-open"></i></h3>
+			<div class="container">
+				<ul>
+					<li><a href="nosotros.html">Nosotros</a></li>
+					<li><a href="http://elcomercio.pe/paginas/smartphones-tablets/culqi-app-peruana-que-busca-revolucionar-pagos-online-noticia-1751283" target="_blank">Prensa</a></li>
+				</ul>
+			</div>
+			<h3>Producto <i class="icon-down-open"></i></h3>
+			<div class="container">
+				<ul>
+					<li><a href="beneficios.html">Beneficios</a></li>
+					<li><a href="precio.html">Precios</a></li>
+					<li><a href="seguridad.html">Seguridad</a></li>
+					<li><a href="legal.html">Legal</a></li>
+				</ul>
+			</div>
+			<h3>Soporte <i class="icon-down-open"></i></h3>
+			<div class="container">
+				<ul>
+					<li><a href="contacto.html">Contacto</a></li>
+					<li>Llámanos (+511) 416 - 2018</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<ul>
+				<ul class="redes">
+					<li><a href="https://facebook.com/Culqi" target="_blank"><i class="icon-facebook"></i></a></li>
+					<li><a href="https://twitter.com/CulqiOficial" target="_blank"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/culqi" target="_blank"><i class="icon-linkedin"></i></a></li>
+				</ul>
+				<li><img src="images/pci.png" alt=""></li>
+				<li class="mixpanel">
+					<a href="https://mixpanel.com/f/partner" target="_blank"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+				</li>
+				<li>&copy; Culqi</li>
+				<li>Todos los derechos reservados</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
